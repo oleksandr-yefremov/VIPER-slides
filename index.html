@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>iOS applications architecture with VIPER</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Oleksandr Yefremov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky_my.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<div class="slides">
+				<section class="center">
+					<br><i>Press spacebar to go to next slide</i>
+					<p><br><br><br>
+					<h1>iOS applications architecture </h1>
+					<h1>with VIPER</h1>
+					<p><p></p><p></p><br><br>
+						<h3>Oleksandr Yefremov</h3>
+					
+						<h4>Mobile developer / Android team lead at</h4>
+						<img width="220" height="58" data-src="images/daxx.png">
+						<p><br>yefremov.oleksandr@gmail
+						<br><a href="https://github.com/oleksandr-yefremov/">Github profile</a>
+					</p>
+				</section>
+
+					<section class="center">
+						<p><h2>Why replace  MVC?</h2></p>
+						<br><br>
+						<h2><p class="fragment">"Does this new code belong to <strong>View</strong> or <strong>Model</strong>? 
+											 <br>Looks like neither, <strong>Controller</strong> then!"</p></h2>
+											 <br><br><br>
+						<h1><p class="fragment">MASSIVE VIEW CONTROLLER</p></h1>
+					</section>
+
+					<section class="center">
+						<h3>VIPER is a guideline to building clean application architecture 
+						<br>by separating distinct layers of responsibility.</h3>
+						<br>
+						<img width="1220" height="600" data-src="images/viper_intro_mm.jpg">
+					</section>	
+
+					<!-- How V-P-I work? -->
+					<section data-transition="slide-in fade-out" class="center">
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_1.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_2.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_3.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_4.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_flow_1.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_flow_2.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_flow_3.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPI_flow_4.png">
+						</section>
+					</section>
+
+					<!-- Why do we need Data Manager? -->
+					<section>
+						<section data-transition="fade-out" class="center">
+							<img class="stretch" data-src="images/viper_main_diagram.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPID_flow_1.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPID_flow_2.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_VPID_flow_3.png">
+						</section>
+
+						<!-- Service - Entity -->
+						<section data-transition="none" class="center">
+							<img class="stretch" data-src="images/viper_DSE_flow_1.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_DSE_flow_2.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_DSE_flow_3.png">
+						</section>
+					</section>
+
+					<!-- Router -->
+					<section>
+						<section data-transition="none" class="center">
+							<img class="stretch" data-src="images/viper_R_flow_1.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_R_flow_2.png">
+						</section>
+						<section data-transition="none">
+							<img class="stretch" data-src="images/viper_R_flow_3.png">
+						</section>
+					</section>
+
+					<!-- DEMO -->
+					<section style="max-height: 100%;">
+						<section data-transition="fade-out" >
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2  style="line-height: 1.2em;">DEMO<br>&nbsp;
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2  style="line-height: 1.2em;">VIPER issues and considerations:<br>&nbsp;
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">Every component is <u>Layer</u>, not a single class<br>&nbsp;
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">View-Presenter-Interactor : 1-1-1<br> Other components are reusable
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">CoreData.<br><u>Interactor</u> and <u>Data Manager</u> layers
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">No state. Behaviour.<br><i>ReactiveCocoa</i> friendly!
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">TDD<br>Mock <u>View</u>, rest of classes is PONSO. Mock <u>Data Manager</u>
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_Protocols_2.png">
+							<h2 style="line-height: 1.2em;">Protocols everywhere.<br>&nbsp;
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">A lot of classes!<br>Rambler Generamba.
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">Router types:<br>&nbsp;
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_W_h600.png">
+							<h2 style="line-height: 1.2em;">Router types:<br>&nbsp;&nbsp;&nbsp;&nbsp;1. Router / Wireframe
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_extended.png">
+							<h2 style="line-height: 1.2em;">&nbsp;&nbsp;&nbsp;&nbsp;2. Router + Assembly. RamblerSegue. Submodules.
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_h600.png">
+							<h2 style="line-height: 1.2em;">Not an exact instruction!<br>Each team makes it work their own way.
+							</h2>
+						</section>
+						<section data-transition="fade-out">
+							<img class="stretch" data-src="images/viper_main_diagram_W_h600.png">
+							<h2 style="line-height: 1.2em;">Questions!<br>&nbsp;
+							</h2>
+						</section>
+					</section>
+					<section>
+						<section style="text-align: left;">
+							<ol>
+							<li>"Counter" demo app<br>
+							<a href="https://github.com/oleksandr-yefremov/Counter">https://github.com/oleksandr-yefremov/Counter</a>
+							<p>
+							<li> Introduction to VIPER (MutualMobile)<br>
+							<a href="http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/">http://mutualmobile.github.io/blog/2013/12/04/viper-introduction/</a>
+							<p>
+							<li> Architecting iOS Apps with VIPER (objc.io - Issue 13)<br>
+							<a href="https://www.objc.io/issues/13-architecture/viper/">https://www.objc.io/issues/13-architecture/viper/</a>
+							<p>
+							<li> Brigade’s Experience Using an MVC Alternative<br>
+							<a href="https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f">https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f</a>
+							<p>
+							<li> 250 Days Shipping With Swift and VIPER (by Brice Pollock from Coursera)<br>
+							<a href="https://realm.io/news/altconf-brice-pollock-250-days-shipping-with-swift-and-viper/">https://realm.io/news/altconf-brice-pollock-250-days-shipping-with-swift-and-viper/</a>
+							<p>
+							<li><strong>Must watch!</strong> VIPER — или то, о чем все говорят, но никто не рассказывает (Егор Толстой, Rambler&Co, in Russian or with ugly English sync translation &#9785 )<br>
+							<a href="http://mbltdev.ru/">http://mbltdev.ru/</a> - look for it in "Records" list to the right
+							<p>
+							<li>Rambler projects and libraries, mentioned in speech at <a href="https://github.com/rambler-ios">https://github.com/rambler-ios</a><br>
+							<ul>
+								<li>The Book of VIPER - in progress. <a href="https://github.com/rambler-ios/The-Book-of-VIPER">in Russian</a>, <a href="https://github.com/rambler-ios/The-Book-of-VIPER/tree/english">in English</a> <br>
+								<li><a href="https://github.com/rambler-ios/RamblerConferences">RamblerConferences</a> - VIPER example app, covers a lot of aspects, rather complicated.<br>
+								<li><a href="https://github.com/rambler-ios/ViperMcFlurry">VIPER McFlurry</a> - framework for implementing VIPER architecture. Offers tools and components that help to start with or move to it.<br>
+								<li><a href="https://github.com/rambler-ios/Generamba">Generamba</a> - code generator specialized in VIPER modules (but still configurable to anything else). Docs now only in Russian.<br>
+								<p>
+							</ul>
+							</ol>
+						</section>
+					</section>
+
+						<!-- <section data-transition="fade-out">
+							<img class="stretch" data-src="images/screenshot_mbltdev_1.png">
+						</section> -->
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				
+				// The "normal" size of the presentation, aspect ratio will be preserved
+			    // when the presentation is scaled to fit different resolutions. Can be
+			    // specified using percentage units.
+			    width: 1920,
+			    height: 1080,
+
+			    // Factor of the display size that should remain empty around the content
+			    margin: 0.0,
+
+			    // Bounds for smallest/largest possible scale to apply to content
+			    minScale: 0.2,
+			    maxScale: 1.5,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
